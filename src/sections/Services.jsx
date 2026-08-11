@@ -3,7 +3,7 @@ import './Services.css'
 const services = [
   {
     number: '01',
-    title: 'Pintura',
+    title: 'Pinturas em geral',
     description:
       'Pintura residencial, predial e de garagens, com preparação e acabamento.',
   },
