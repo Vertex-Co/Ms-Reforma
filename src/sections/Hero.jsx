@@ -42,7 +42,7 @@ function Hero() {
           <div className="hero__eyebrow">
             <span />
 
-            Acabamento e reforma
+            Revestimentos • acabamento • reforma
           </div>
 
           <h1>
@@ -54,11 +54,11 @@ function Hero() {
           </h1>
 
           <p className="hero__description">
-            Soluções completas em reformas, pinturas,
-            acabamentos e manutenção para residências,
-            edifícios e empreendimentos em todo o
-            Distrito Federal.
-          </p>
+  Especialistas em troca e instalação de revestimentos,
+  além de reformas, pinturas, acabamentos e manutenção
+  para residências, edifícios e empreendimentos em todo
+  o Distrito Federal.
+</p>
 
           <div className="hero__actions">
 

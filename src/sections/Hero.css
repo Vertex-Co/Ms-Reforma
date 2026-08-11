@@ -734,3 +734,9 @@
     display: none;
   }
 }
+/* Alinha o card da logo com o início do título no desktop */
+@media (min-width: 781px) {
+  .hero__visual {
+    transform: translateY(-50px);
+  }
+}

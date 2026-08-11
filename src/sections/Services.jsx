@@ -3,39 +3,39 @@ import './Services.css'
 const services = [
   {
     number: '01',
-    title: 'Pinturas em geral',
+    title: 'Revestimentos',
     description:
-      'Pintura residencial, predial e de garagens, com preparação e acabamento.',
+      'Troca e instalação de revestimentos para renovar, proteger e valorizar seus ambientes.',
   },
   {
     number: '02',
+    title: 'Pinturas em geral',
+    description:
+      'Pintura residencial, predial, de garagens e outros ambientes, com preparação e acabamento.',
+  },
+  {
+    number: '03',
     title: 'Drywall',
     description:
       'Instalação de gesso acartonado para divisórias, ambientes e acabamentos.',
   },
   {
-    number: '03',
+    number: '04',
     title: 'Reformas e reparos',
     description:
       'Reformas de pequeno, médio e grande porte, além de manutenções em geral.',
   },
   {
-    number: '04',
+    number: '05',
     title: 'Instalações',
     description:
       'Serviços de elétrica, hidráulica, azulejista e outras necessidades da obra.',
   },
   {
-    number: '05',
+    number: '06',
     title: 'Limpeza de estruturas',
     description:
       'Limpeza de fachadas, placas, muros e outras estruturas.',
-  },
-  {
-    number: '06',
-    title: 'Piso laminado',
-    description:
-      'Instalação de piso laminado para renovar ambientes com conforto e praticidade.',
   },
 ]
 
@@ -60,9 +60,11 @@ function Services() {
           </div>
 
           <p>
-            Do pequeno reparo à reforma completa,
-            a MS Reforma atende diferentes necessidades
-            em todo o Distrito Federal.
+             
+               Transformamos suas necessidades em soluções que fazem a diferença.
+               Entre em contato conosco e descubra como podemos tornar seu projeto
+                realidade com qualidade e excelência. Atendemos em todo o Distrito Federal.
+            
           </p>
         </div>
 
