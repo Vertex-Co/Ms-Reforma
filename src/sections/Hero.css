@@ -1,0 +1,736 @@
+.hero {
+  position: relative;
+
+  min-height: 100svh;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  padding:
+    165px
+    0
+    110px;
+
+  background:
+    linear-gradient(
+      120deg,
+      #07121e 0%,
+      #0d1e2f 48%,
+      #091724 100%
+    );
+}
+
+/* ===================================
+   FUNDO TÉCNICO
+=================================== */
+
+.hero__blueprint {
+  position: absolute;
+
+  inset: 0;
+
+  opacity: 0.1;
+
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      rgba(200, 160, 86, 0.12) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(200, 160, 86, 0.12) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    90px 90px,
+    90px 90px,
+    360px 360px,
+    360px 360px;
+}
+
+/* ===================================
+   GLOWS
+=================================== */
+
+.hero__glow {
+  position: absolute;
+
+  border-radius: 999px;
+
+  filter: blur(110px);
+
+  pointer-events: none;
+}
+
+.hero__glow--one {
+  width: 450px;
+  height: 450px;
+
+  right: 3%;
+  top: 8%;
+
+  background: rgba(200, 160, 86, 0.08);
+}
+
+.hero__glow--two {
+  width: 320px;
+  height: 320px;
+
+  left: -120px;
+  bottom: -120px;
+
+  background: rgba(87, 115, 143, 0.11);
+}
+
+/* ===================================
+   CONTAINER
+=================================== */
+
+.hero__container {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(1240px, calc(100% - 56px));
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.18fr)
+    minmax(380px, 0.82fr);
+
+  align-items: center;
+
+  gap: 110px;
+}
+
+/* ===================================
+   ESQUERDA
+=================================== */
+
+.hero__content {
+  max-width: 710px;
+}
+
+.hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 32px;
+
+  color: var(--color-gold);
+
+  font-size: 0.72rem;
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+.hero__eyebrow span {
+  display: block;
+
+  width: 40px;
+  height: 2px;
+
+  flex-shrink: 0;
+
+  background: var(--color-gold);
+}
+
+.hero h1 {
+  max-width: 720px;
+
+  color: var(--color-white);
+
+  font-size: clamp(
+    3rem,
+    5vw,
+    5.3rem
+  );
+
+  line-height: 1.02;
+
+  font-weight: 700;
+
+  letter-spacing: -0.055em;
+}
+
+.hero h1 span {
+  display: block;
+
+  margin-top: 12px;
+
+  color: var(--color-gold);
+}
+
+.hero__description {
+  max-width: 670px;
+
+  margin-top: 36px;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 1rem;
+
+  line-height: 1.85;
+}
+
+/* ===================================
+   BOTÕES
+=================================== */
+
+.hero__actions {
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+
+  margin-top: 40px;
+}
+
+.hero__primary-button,
+.hero__secondary-button {
+  min-height: 56px;
+
+  padding: 0 26px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  font-size: 0.84rem;
+  font-weight: 700;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.hero__primary-button {
+  gap: 15px;
+
+  background: var(--color-gold);
+
+  color: var(--color-navy-dark);
+}
+
+.hero__primary-button span {
+  font-size: 1.15rem;
+}
+
+.hero__primary-button:hover,
+.hero__secondary-button:hover {
+  transform: translateY(-3px);
+}
+
+.hero__secondary-button {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+
+  color: rgba(255, 255, 255, 0.8);
+
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.hero__secondary-button:hover {
+  border-color: rgba(200, 160, 86, 0.55);
+
+  color: var(--color-white);
+}
+
+/* ===================================
+   NÚMEROS / DIFERENCIAIS
+=================================== */
+
+.hero__trust {
+  display: flex;
+  align-items: center;
+
+  gap: 28px;
+
+  margin-top: 60px;
+
+  padding-top: 30px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hero__trust-item {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.hero__trust-item strong {
+  color: var(--color-white);
+
+  font-size: 1.55rem;
+  font-weight: 700;
+}
+
+.hero__trust-item span {
+  color: rgba(255, 255, 255, 0.46);
+
+  font-size: 0.65rem;
+
+  line-height: 1.5;
+}
+
+.hero__divider {
+  width: 1px;
+  height: 38px;
+
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ===================================
+   VISUAL DIREITO
+=================================== */
+
+.hero__visual {
+  position: relative;
+
+  min-height: 530px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__logo-card {
+  position: relative;
+
+  width: min(450px, 100%);
+
+  min-height: 440px;
+
+  padding:
+    42px
+    38px
+    38px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.065),
+      rgba(255, 255, 255, 0.018)
+    );
+
+  box-shadow:
+    0 40px 90px
+    rgba(0, 0, 0, 0.28);
+
+  backdrop-filter: blur(16px);
+}
+
+.hero__logo-card::before {
+  content: '';
+
+  position: absolute;
+
+  width: 190px;
+  height: 190px;
+
+  top: -110px;
+  right: -80px;
+
+  border: 1px solid rgba(200, 160, 86, 0.12);
+
+  transform: rotate(45deg);
+}
+
+/* ===================================
+   LOGO REAL
+=================================== */
+
+.hero__logo-image {
+  width: 100%;
+  min-height: 280px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: visible;
+}
+
+.hero__logo-image img {
+  display: block;
+
+  width: 100%;
+  max-width: 370px;
+  height: auto;
+
+  object-fit: contain;
+
+  opacity: 1;
+  visibility: visible;
+
+  position: static;
+  transform: none;
+}
+
+/* ===================================
+   LINHA / TEXTO
+=================================== */
+
+.hero__logo-card-line {
+  width: 88%;
+  height: 1px;
+
+  margin-top: 28px;
+  margin-bottom: 22px;
+
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      rgba(200, 160, 86, 0.65),
+      transparent
+    );
+}
+
+.hero__logo-card p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 0.55rem;
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+}
+
+.hero__logo-card p span {
+  color: var(--color-gold);
+}
+
+/* ===================================
+   CARD FLUTUANTE
+=================================== */
+
+.hero__floating-card {
+  position: absolute;
+
+  left: -34px;
+  bottom: 22px;
+
+  min-width: 285px;
+
+  padding: 18px 20px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  border-radius: 14px;
+
+  background: rgba(7, 18, 30, 0.91);
+
+  box-shadow:
+    0 20px 50px
+    rgba(0, 0, 0, 0.28);
+
+  backdrop-filter: blur(20px);
+}
+
+.hero__floating-icon {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(200, 160, 86, 0.14);
+
+  color: var(--color-gold);
+
+  font-weight: 700;
+}
+
+.hero__floating-card div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.hero__floating-card strong {
+  color: var(--color-white);
+
+  font-size: 0.72rem;
+}
+
+.hero__floating-card small {
+  color: rgba(255, 255, 255, 0.46);
+
+  font-size: 0.61rem;
+}
+
+/* ===================================
+   SCROLL
+=================================== */
+
+.hero__scroll {
+  position: absolute;
+
+  z-index: 5;
+
+  left: 50%;
+  bottom: 24px;
+
+  width: 25px;
+  height: 40px;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  border-radius: 99px;
+
+  transform: translateX(-50%);
+}
+
+.hero__scroll span {
+  position: absolute;
+
+  left: 50%;
+  top: 8px;
+
+  width: 3px;
+  height: 7px;
+
+  border-radius: 99px;
+
+  background: var(--color-gold);
+
+  transform: translateX(-50%);
+
+  animation: hero-scroll 1.8s infinite;
+}
+
+@keyframes hero-scroll {
+  0% {
+    opacity: 0;
+
+    transform: translate(-50%, 0);
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+
+    transform: translate(-50%, 13px);
+  }
+}
+
+/* ===================================
+   TABLET
+=================================== */
+
+@media (max-width: 1050px) {
+  .hero__container {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(320px, 0.8fr);
+
+    gap: 60px;
+  }
+
+  .hero__logo-card {
+    padding: 32px;
+  }
+
+  .hero__floating-card {
+    left: -15px;
+  }
+}
+
+/* ===================================
+   MOBILE
+=================================== */
+
+@media (max-width: 780px) {
+  .hero {
+    min-height: auto;
+
+    padding:
+      135px
+      0
+      85px;
+  }
+
+  .hero__container {
+    width: calc(100% - 36px);
+
+    grid-template-columns: 1fr;
+
+    gap: 70px;
+  }
+
+  .hero__eyebrow {
+    margin-bottom: 28px;
+
+    font-size: 0.61rem;
+  }
+
+  .hero h1 {
+    font-size:
+      clamp(
+        2.65rem,
+        12vw,
+        4.2rem
+      );
+
+    line-height: 1.03;
+  }
+
+  .hero h1 span {
+    margin-top: 9px;
+  }
+
+  .hero__description {
+    margin-top: 30px;
+
+    font-size: 0.92rem;
+
+    line-height: 1.8;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 12px;
+
+    margin-top: 34px;
+  }
+
+  .hero__primary-button,
+  .hero__secondary-button {
+    width: 100%;
+
+    min-height: 56px;
+  }
+
+  .hero__trust {
+    display: grid;
+
+    grid-template-columns:
+      repeat(3, 1fr);
+
+    gap: 14px;
+
+    margin-top: 48px;
+
+    padding-top: 28px;
+  }
+
+  .hero__trust-item {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 6px;
+  }
+
+  .hero__trust-item strong {
+    font-size: 1.25rem;
+  }
+
+  .hero__trust-item span {
+    font-size: 0.55rem;
+  }
+
+  .hero__divider {
+    display: none;
+  }
+
+  .hero__visual {
+    min-height: auto;
+  }
+
+  .hero__logo-card {
+    width: 100%;
+
+    min-height: 390px;
+
+    padding: 32px 24px 48px;
+
+    border-radius: 22px;
+  }
+
+  .hero__logo-image img {
+    max-width: 310px;
+  }
+
+  .hero__logo-card-line {
+    margin-top: 22px;
+  }
+
+  .hero__logo-card p {
+    flex-wrap: wrap;
+
+    font-size: 0.48rem;
+  }
+
+  .hero__floating-card {
+    left: 18px;
+    right: 18px;
+
+    bottom: -28px;
+
+    min-width: 0;
+  }
+
+  .hero__scroll {
+    display: none;
+  }
+}
